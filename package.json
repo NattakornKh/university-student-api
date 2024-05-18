@@ -2,11 +2,11 @@
   "name": "university-student-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node src/app.ts",
-    "seed": "ts-node scripts/seed.ts"
+    "start": "ts-node -r dotenv/config src/app.ts",
+    "seed": "node -r dotenv/config scripts/seed.js"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +14,8 @@
   "dependencies": {
     "@vercel/postgres": "^0.8.0",
     "dotenv": "^16.4.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "pg": "^8.11.5"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.5",
